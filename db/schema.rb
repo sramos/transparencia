@@ -11,11 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151023195901) do
-
+ActiveRecord::Schema.define(version: 20151023214033) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
   create_table "patrimony_buildings", force: :cascade do |t|
     t.string   "district"
     t.string   "use_type"
@@ -70,6 +68,24 @@ ActiveRecord::Schema.define(version: 20151023195901) do
     t.date     "application_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+
+  create_table "areas", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "departments", force: :cascade do |t|
+    t.string  "name"
+    t.text    "description"
+    t.text    "directives"
+    t.integer "area_id"
+  end
+
+  create_table "objectives", force: :cascade do |t|
+    t.string  "title"
+    t.text    "description"
+    t.boolean "accomplished",  default: false
+    t.integer "order"
+    t.integer "department_id"
   end
 
 end
