@@ -13,6 +13,7 @@ es:
       contracts: "Contratos"
       grants: "Subvenciones"
       budgets: "Presupuestos"
+      patrimony: "Patrimonio"
     footer:
       description: "Este portal usa la %{consul} que es %{open_source}. De Madrid, para el mundo entero."
       open_source: "software libre"

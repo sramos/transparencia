@@ -20,7 +20,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'foundation-rails'
 gem 'foundation_rails_helper'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -35,6 +34,7 @@ group :development, :test do
   gem 'launchy'
   gem 'quiet_assets'
   gem 'i18n-tasks'
+  gem 'roo', '~> 2.1.0'
 end
 
 group :test do
