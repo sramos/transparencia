@@ -1,0 +1,10 @@
+<strong>¿Que buscas?</strong>
+<% @areas = ["buildings", "renting_buildings", "historical", "vehicles", "renting_vehicles"] %>
+<% @areas.each do |area| %>
+  <div id="<%= area %>" class="area">
+    <%= link_to "/patrimony/" + area, class: active_class(@areas, area) do %>
+      <span><%= t(area) %></span>
+      <i class="icon-angle-right"></i>
+    <% end %>    
+  </div>
+<% end %>   

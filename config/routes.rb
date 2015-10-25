@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  resource :patrimony, controller: "patrimony", only: [:index,:show]
+  resources :patrimony, only: [:index]
+  namespace :patrimony do
+    resources :buildings, :renting_buildings
+  end
 
   resources :areas, only: [:index] do
     resources :departments, only: [:index]  

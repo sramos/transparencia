@@ -1,6 +1,6 @@
 class PatrimonyController < ApplicationController
 
-  def show
+  def index 
   end
 
 end
