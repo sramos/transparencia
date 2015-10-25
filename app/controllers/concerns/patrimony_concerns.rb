@@ -6,7 +6,6 @@ module PatrimonyConcerns extend ActiveSupport::Concern
   def get_subheader_info
     name = params[:controller]
     @patrimony_section = name.sub(/patrimony\//, "")
-    @application_dates_range = eval(("patrimony_" + name).camelize).application_dates_range
   end
 
 end
