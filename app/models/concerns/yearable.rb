@@ -6,7 +6,7 @@ module Yearable extend ActiveSupport::Concern
   module ClassMethods
     # Returns available range of application years
     def application_dates_range
-      self.minimum(:application_date)..self.maximum(:application_date)
+      (self.minimum(:application_date)||0)..(self.maximum(:application_date)||0)
     end
   end
 end

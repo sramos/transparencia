@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :patrimony, only: [:index]
   namespace :patrimony do
-    resources :buildings, :renting_buildings
+    resources :buildings, :renting_buildings, :historical, :vehicles, :renting_vehicles
   end
 
   resources :areas, only: [:index] do

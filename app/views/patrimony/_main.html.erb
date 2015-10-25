@@ -1,11 +1,13 @@
 <div class="program-accomplishment row">
   <div class="large-3 columns">
     <div class="areas column_left">
-      <%= render 'patrimony/menu' %>      
+      <%= render '/patrimony/menu' %>      
     </div>
   </div>
-  <div class="large-4 columns">
-  </div>
-  <div class="large-5 columns">
+  <div class="large-9 columns">
+    <% if @patrimony_section %>
+      <h2><small><%= t(@patrimony_section) %></small></h2>
+      <%= render params[:action] %> 
+    <% end %>
   </div>
 </div>
