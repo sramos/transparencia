@@ -82,6 +82,7 @@ GEM
     fuubar (2.0.0)
       rspec (~> 3.0)
       ruby-progressbar (~> 1.4)
+    geocoder (1.2.11)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     highline (1.7.8)
@@ -235,6 +236,7 @@ DEPENDENCIES
   foundation-rails
   foundation_rails_helper
   fuubar
+  geocoder
   i18n-tasks
   jbuilder (~> 2.0)
   jquery-rails
